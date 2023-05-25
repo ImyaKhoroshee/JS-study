@@ -58,9 +58,11 @@ digitPlaces(+prompt('Введите натуральное число'));
 // Создайте функцию которая возводит переданное число в куб, необходимо вывести в консоль результат 2^3 степени + 3 ^ 3 степени
 
 const numberToCube = number => Math.pow(number, 3);
+
 const sum = (firstNum, secondNum) => firstNum + secondNum;
 
-console.log(sum(numberToCube(2), numberToCube(3)));
+const sumResult = sum(numberToCube(2), numberToCube(3));
+console.log(sumResult);
 
 // Задание 2
 // Пользователь вводит с клавиатуры число, если ввёл текст, необходимо вывести что значение задано неверно
@@ -68,9 +70,9 @@ console.log(sum(numberToCube(2), numberToCube(3)));
 
 const userSalaryAfterTax = function salaryAfterTax(SalaryBeforeTax) {
     if (+SalaryBeforeTax > 0) {
-        let salaryAfterTax = +SalaryBeforeTax - (+SalaryBeforeTax * 13 / 100);
-        alert(`Размер заработной платы за вычетом налогов равен ${salaryAfterTax}`);
-        return salaryAfterTax
+        let salaryMinusTax = +SalaryBeforeTax - (+SalaryBeforeTax * 13 / 100);
+        alert(`Размер заработной платы за вычетом налогов равен ${salaryMinusTax}`);
+        return salaryMinusTax;
     } else {
         alert('Ошибка ввода');
         userSalaryAfterTax(prompt('Введите корректную сумму Вашей заработной платы до вычета налога')); // пока не надоест :)
@@ -83,7 +85,7 @@ userSalaryAfterTax(prompt('Введите сумму Вашей заработн
 // Пользователь с клавиатуры вводит 3 числа, необходимо создать функцию, которая определяет максимальное значение среди этих чисел
 
 function userInput() {
-    let userInput = prompt('Введите три числа через пробел'); // Полагаюсь на корректность ввода :)
+    let userInput = prompt('Введите числа через пробел'); // Полагаюсь на корректность ввода :) Отработает не только для 3-х чисел
     return userInput.split(' ');
 }
 
@@ -93,7 +95,7 @@ const getMax = () => Math.max(...userInput());
 // Необходимо реализовать четыре функции, каждая функция должна принимать по два числа и выполнять одну из операций (каждая функция выполняет одну из них): 1. Сложение  2. Разность   3. Умножение  4. Деление
 // Необходимо сделать так, чтобы функция вернула число, например выражение console.log(sum(2, 6)); должно вывести число 8 в консоль (sum - функция сложения в данном примере, ваши названия функций могут отличаться). Округлять значения, которые возвращают функции не нужно, однако, обратите внимание на разность, функция должна вычесть из большего числа меньшее, либо вернуть 0, если числа равны.Функциям всегда передаются корректные числа, проверки на NaN, Infinity делать не нужно.
 
-const sumOfNum = (a, b) => a + b;
+const sumOfNum = (a, b) => a + b;                                   // по условию на вход даются числа, поэтому без проверок и приведений.
 const differenceOfNum = (a, b) => (a > b) ? (a - b) : (b - a);
 const productOfNum = (a, b) => a * b;
 const quotientOfNum = (a, b) => a / b;
