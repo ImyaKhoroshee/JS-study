@@ -111,69 +111,69 @@
 // …
 // 10 – четное число
 
-function sortAndPrintNumbers(lines) {
-    console.log('0 – это ноль');
-    for (let i = 1; i < lines; i++) {
-        if (i % 2 === 0) console.log(`${i} – это четное число`);
-        else console.log(`${i} – это нечетное число`);
-    }
-}
-sortAndPrintNumbers(11);
+// function sortAndPrintNumbers(lines) {
+//     console.log('0 – это ноль');
+//     for (let i = 1; i < lines; i++) {
+//         if (i % 2 === 0) console.log(`${i} – это четное число`);
+//         else console.log(`${i} – это нечетное число`);
+//     }
+// }
+// sortAndPrintNumbers(11);
 
-// Задание 2
-// Дан массив [1, 2, 3, 4, 5, 6, 7]     Сделайте из этого массива следующий [1, 2, 3, 6, 7]
+// // Задание 2
+// // Дан массив [1, 2, 3, 4, 5, 6, 7]     Сделайте из этого массива следующий [1, 2, 3, 6, 7]
 
-const testArray = [1, 2, 3, 4, 5, 6, 7];
-testArray.splice(3, 2);
-console.log(testArray);
+// const testArray = [1, 2, 3, 4, 5, 6, 7];
+// testArray.splice(3, 2);
+// console.log(testArray);
 
-// Задание 3
-// Используя Math.random() вам необходимо генерировать цифры от 0 до 9, и создать массив состоящий из 5 таких элементов
-// 1. Рассчитать сумму элементов этого массива
-// 2. Найти минимальное число
-// 3. Найти есть ли в этом массиве число 3
+// // Задание 3
+// // Используя Math.random() вам необходимо генерировать цифры от 0 до 9, и создать массив состоящий из 5 таких элементов
+// // 1. Рассчитать сумму элементов этого массива
+// // 2. Найти минимальное число
+// // 3. Найти есть ли в этом массиве число 3
 
-// Функция для генерации случайного целого числа от min до max+1
-const randomInteger = (min, max) => Math.floor(min + Math.random() * (max + 1 - min));
+// // Функция для генерации случайного целого числа от min до max+1
+// const randomInteger = (min, max) => Math.floor(min + Math.random() * (max + 1 - min));
 
-// Функция для создания числового массива с указанной длиной и необходимыми целыми числами в качестве элементов массива
-function createRandomArray(length, rangeStart, rangeEnd) {
-    const array = [];
-    for (let i = 0; i < length; i++) {
-        array[i] = randomInteger(rangeStart, rangeEnd);
-    }
-    return array;
-}
+// // Функция для создания числового массива с указанной длиной и необходимыми целыми числами в качестве элементов массива
+// function createRandomArray(length, rangeStart, rangeEnd) {
+//     const array = [];
+//     for (let i = 0; i < length; i++) {
+//         array[i] = randomInteger(rangeStart, rangeEnd);
+//     }
+//     return array;
+// }
 
-// Функция для нахождения суммы элементов в указанном числовом массиве
-function sumOfArrayElement(arr) {
-    let arrSum = 0;
-    for (let i = 0; i < arr.length; i++) {
-        arrSum += arr[i];
-    }
-    return arrSum;
-}
+// // Функция для нахождения суммы элементов в указанном числовом массиве
+// function sumOfArrayElement(arr) {
+//     let arrSum = 0;
+//     for (let i = 0; i < arr.length; i++) {
+//         arrSum += arr[i];
+//     }
+//     return arrSum;
+// }
 
-// Функция для нахождения минимального элемента в указанном числовом массиве
-const getMinInArray = arr => Math.min(...arr);
+// // Функция для нахождения минимального элемента в указанном числовом массиве
+// const getMinInArray = arr => Math.min(...arr);
 
-// Функция для нахождения указанного элемента в заданном массиве
-function findThePointedDigit(arr, number) {
-    if (arr.indexOf(number) === -1) return false;
-    else return true;
-}
+// // Функция для нахождения указанного элемента в заданном массиве
+// function findThePointedDigit(arr, number) {
+//     if (arr.indexOf(number) === -1) return false;
+//     else return true;
+// }
 
-const randomArr = createRandomArray(5, 0, 9);
-const sumArr = sumOfArrayElement(randomArr);
-const minInArr = getMinInArray(randomArr);
-const hasNumberInArr = findThePointedDigit(randomArr, 3);
+// const randomArr = createRandomArray(5, 0, 9);
+// const sumArr = sumOfArrayElement(randomArr);
+// const minInArr = getMinInArray(randomArr);
+// const hasNumberInArr = findThePointedDigit(randomArr, 3);
 
-// Вывод
-console.log(`
-    Массив: ${randomArr}
-    Сумма элементов этого массива: ${sumArr}
-    Минимальное число в этом массиве: ${minInArr}
-    Есть ли в этом миссиве цифра 3: ${hasNumberInArr}`);
+// // Вывод
+// console.log(`
+//     Массив: ${randomArr}
+//     Сумма элементов этого массива: ${sumArr}
+//     Минимальное число в этом массиве: ${minInArr}
+//     Есть ли в этом миссиве цифра 3: ${hasNumberInArr}`);
 
 // *Необязательное задание. *
 // Необходимо вывести горку в консоль (используя цикл for), как показано на рисунке, только у вашей горки должно быть 20 рядов, а не 5:
@@ -185,12 +185,143 @@ console.log(`
 // xxxxx
 
 // Функция для отрисовски горки с заданным символом и количеством строк
-function simbolSlide(simbol, lines) {
-    let original = simbol;
-    for (let i = 0; i < lines; i++) {
-        console.log(simbol);
-        simbol += original;
-    }
-    return simbol;
+// function simbolSlide(simbol, lines) {
+//     let original = simbol;
+//     for (let i = 0; i < lines; i++) {
+//         console.log(simbol);
+//         simbol += original;
+//     }
+//     return simbol;
+// }
+// simbolSlide('x', 20);
+
+// Урок 10
+
+
+// Задание 1
+// Дан объект numbers. Необходимо в консоль вывести все значения больше или равные 3.
+
+const numbers = {
+keyin1: 1,
+keyin2: 2,
+keyin3: 3,
+keyin4: 4,
+keyin5: 5,
+keyin6: 6,
+keyin7: 7,
 }
-simbolSlide('x', 20);
+
+const numbersValues = Object.values(numbers).filter(element => element >= 3);
+console.log(numbersValues);
+
+// Задание 2
+// Необходимо из объекта, который лежит в константе post вывести значения, к которым приписан комментарий, в консоль.
+
+const post = {
+    author: "John", // вывести этот текст
+    postId: 23,
+    comments: [
+        {
+            userId: 10,
+            userName: "Alex",
+            text: "lorem ipsum",
+            rating: {
+                likes: 10,
+                dislikes: 2, // вывести это число
+                },
+        },
+        {
+            userId: 5, // вывести это число
+            userName: "Jane",
+            text: "lorem ipsum 2", // вывести этот текст
+            rating: {
+                likes: 3,
+                dislikes: 1,
+            },
+        },
+    ],
+};
+
+const array = [];
+array.push(post.author, post.comments[0].rating.dislikes, post.comments[1].userId, post.comments[1].text);
+console.log(array);
+
+// Задание 3
+// Дан массив products, необходимо цену каждого продукта уменьшить на 15% используя метод forEach.
+
+const products = [
+    {
+        id: 3,
+        price: 200,
+    },
+    {
+        id: 4,
+        price: 900,
+    },
+    {
+        id: 1,
+        price: 1000,
+    },
+];
+    
+products.forEach(elem => elem.price = elem.price - elem.price * 0.15);
+console.log(products);
+
+// Задание 4
+// 1. Необходимо вывести в консоль массив продуктов в котором есть хоть одна фотография используя метод filter. Исходные данные - массив productsNew.
+// 2. Необходимо отсортировать массив productsNew используя метод sort по цене, начиная с самой маленькой, заканчивая самой большой ценой, после чего вывести отсортированный массив в консоль.
+
+
+const productsNew = [
+    {
+        id: 3,
+        price: 127,
+        photos: [
+            "1.jpg",
+            "2.jpg",
+        ],
+    },
+    {
+        id: 5,
+        price: 499,
+        photos: [],
+    },
+    {
+        id: 10,
+        price: 26,
+        photos: [
+        "3.jpg",
+        ],
+    },
+    {
+        id: 8,
+        price: 78,
+    },
+];
+
+const photosArray = productsNew.filter(elem => elem.photos && elem.photos != 0);
+console.log(photosArray);
+
+// const sortArray = productsNew.sort((a, b) => a.price > b.price ? 1 : -1);
+const sortArray = productsNew.sort((a, b) => a.price - b.price);
+console.log(sortArray);
+
+// **Задание 5**
+// Дано 2 массива 
+// Вам необходимо объединить 2 этих массива, чтобы значения первого массива были ключами, а значения второго массива — значениями.
+
+const en = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+const ru = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"];
+
+const weekObj = {};
+
+if (en.length === ru.length) {
+    for (let i = 0; i < en.length; i++) {
+        weekObj[en[i]] = ru[i];
+    }
+}
+console.log(weekObj);
+
+// Проговорю этот вариант: в коллбэк функцию подаем три параметра - наше конечное значение (аккумулятор), которое будет объектом (это видно в конце строки после запятой), элемент массива en, по которому мы бежим и индекс, чтобы обращаться ко второму массиву. Далее мы присваиваем ключ и значение и возвращаем объект. Все тоже самое происходит и со вторым элементом массива. В конечном итоге на выходе у нас будет набран объект.
+const reseultOfReduce = en.reduce((acc, elem, index) => (acc[elem] = ru[index], acc), {});
+console.log(reseultOfReduce);
