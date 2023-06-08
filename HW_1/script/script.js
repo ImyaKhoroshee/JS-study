@@ -212,6 +212,12 @@
 // }
 
 // const numbersValues = Object.values(numbers).filter(element => element >= 3);
+// for (const key in Object.values(numbers)) {
+//     if (Object.hasOwnProperty.call(object, key)) {
+//         const element = object[key];
+        
+//     }
+// }
 // console.log(numbersValues);
 
 // // Задание 2
@@ -307,7 +313,7 @@
 // console.log(sortArray);
 
 // // **Задание 5**
-// // Дано 2 массива 
+// // Дано 2 массива
 // // Вам необходимо объединить 2 этих массива, чтобы значения первого массива были ключами, а значения второго массива — значениями.
 
 // const en = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
@@ -326,3 +332,110 @@
 // const reseultOfReduce = en.reduce((acc, elem, index) => (acc[elem] = ru[index], acc), {});
 // console.log(reseultOfReduce);
 
+
+// var array = [["white", "goodness"], ["black", "think"]];
+
+// function colourAssociation(array) {
+//     for (let i = 0; i < array.length; i++) {
+//         array[i] = { [array[i][0]]: array[i][1] };
+//     }
+//     return array;
+// }
+    
+
+// console.log(colourAssociation(array));
+
+// function colourAssociation(array) {
+//     const colourAndCondition = array.map((item) => array.item[0] = item[1]);
+//     return colourAndCondition;
+// }
+    
+
+// function colourAssociation(array) {
+//     return array.map(item => ({[item[0]]: item[1]}));
+// }
+// console.log(colourAssociation(array));
+
+
+
+
+// function combine(...objs) {
+//   const result = {};
+
+//   for (const obj of objs) {
+//     for (const [key, value] of Object.entries(obj)) {
+//       result[key] = (result[key] || 0) + value;
+//     }
+//   }
+//   return result;
+// }
+
+// const objA = { a: 10, b: 20, c: 30 }
+// const objB = { a: 3, c: 6, d: 3 }
+
+
+// console.log(combine(objA, objB)); // Returns { a: 13, b: 20, c: 36, d: 3 }
+
+// const numbers = [
+//         {
+//         keyin1: 1,
+//         pract: 2
+//         },
+//         {
+//         keyin1: 5,
+//         pract: 3
+//     },
+//         {
+//         keyin1: 7,
+//         pract:7
+//         },
+//         {
+//         keyin1: 8,
+//         pract: 1
+//         },
+//     ]
+
+// const values = numbers.map(elem => elem.pract);
+// console.log(values);
+
+// const arr = 2;
+// function findMax(...args) {
+//     console.log(args);
+// }
+// findMax(values);
+// findMax(arr);
+
+// console.log(...numbers);
+
+
+// const list2 = [
+//     { firstName: 'Oliver', lastName: 'Q.', country: 'Australia', continent: 'Oceania', age: 19, language: 'HTML' },
+//     { firstName: 'Lukas', lastName: 'R.', country: 'Austria', continent: 'Europe', age: 89, language: 'JavaScript' },
+//     { firstName: 'Tatya', lastName: 'R.', country: 'Austria', continent: 'Europe', age: 89, language: 'JavaScript' },
+//     { firstName: 'Valera', lastName: 'R.', country: 'Austria', continent: 'Europe', age: 89, language: 'HTML' },
+//     { firstName: 'Noah', lastName: 'M.', country: 'Switzerland', continent: 'Europe', age: 19, language: 'JavaScript' },
+//   { firstName: 'Maia', lastName: 'S.', country: 'Tahiti', continent: 'Oceania', age: 28, language: 'JavaScript' },
+//   { firstName: 'Shufen', lastName: 'L.', country: 'Taiwan', continent: 'Asia', age: 35, language: 'HTML' },
+//   { firstName: 'Sumayah', lastName: 'M.', country: 'Tajikistan', continent: 'Asia', age: 30, language: 'CSS' }
+// ];
+  
+// function countDevelopers(list) {
+//     const check = list.filter(item => (item.continent === 'Europe' && item.language === 'JavaScript'));
+//     console.log(check);
+//     return (check !== undefined) ? Object.keys(check).length : 0;
+// };
+
+ 
+// console.log(countDevelopers(list2));
+
+const testArray = [1, 2, 3, 4, 5, 6, 7];
+const test = ['1', '2', 3, true, 5, 6, 7];
+
+function findMax(...rest) {
+    console.log(rest);
+    rest.reduce((count, elem) => {
+        if (elem > count) { return elem; }
+        else { return count; }
+    }, -Infinity);
+};
+console.log(findMax(...testArray, ...test));
