@@ -143,3 +143,29 @@ img {
         }
     }
 }
+@media (max-width: 375px) {
+    .header {
+        &__heading {
+            font-size: 1.25rem;
+        }
+    }
+    .user-card {
+        padding-left: 12px;
+        &__id {
+            font-size: 1.25rem;
+        }
+        &__personaldata {
+            width: 150px;
+            padding-left: 3px;
+            font-size: 0.6rem;
+            gap: 8px;
+        }
+        &__firstlastname {
+            font-size: 0.8rem;
+        }
+        &__image {
+            width: 75px;
+            height: 75px;
+        }
+    }
+}

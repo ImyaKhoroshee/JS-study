@@ -146,4 +146,28 @@ img {
     width: 100px;
     height: 100px;
   }
+}
+@media (max-width: 375px) {
+  .header__heading {
+    font-size: 1.25rem;
+  }
+  .user-card {
+    padding-left: 12px;
+  }
+  .user-card__id {
+    font-size: 1.25rem;
+  }
+  .user-card__personaldata {
+    width: 150px;
+    padding-left: 3px;
+    font-size: 0.6rem;
+    gap: 8px;
+  }
+  .user-card__firstlastname {
+    font-size: 0.8rem;
+  }
+  .user-card__image {
+    width: 75px;
+    height: 75px;
+  }
 }/*# sourceMappingURL=style.css.map */
