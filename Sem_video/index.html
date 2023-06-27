@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="videoplayer">
+        <video class="video" src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4"></video>
+
+        <img src="./img/bi_play-circle-fill.svg" alt="play" class="play-button">
+        <img src="./img/kisspng-circle-area-white-angle-point-pause-button-png-hd-5a757eb5b78ed6.6228734715176495897519.png"
+            alt="pause" class="pause-button">
+        <div class="time-wrapper">
+            Время: <span class="current-time">0</span>
+            <input class="time" type="range" value="0" step="0.001">
+        </div>
+
+        <img class="volume-button" src="./img/clarity_volume-up-solid.svg" alt="volume">
+
+
+        <input class="volume-input" type="range" min="0" max="1" step="0.01">
+
+    </div>
+
+
+    <script>
+        const video = document.querySelector('video');
+        const playButton = document.querySelector('.play-button');
+        const pauseButton = document.querySelector('.pause-button');
+        const volumeButton = document.querySelector('.volume-button');
+        const timeEl = document.querySelector('.time');
+        const currentTimeEl = document.querySelector('.current-time');
+        const volumeInput = document.querySelector('.volume-input');
+        playButton.addEventListener('click', () => {
+            video.play();
+        });
+
+        pauseButton.addEventListener('click', () => {
+            video.pause();
+        });
+
+        video.addEventListener('timeupdate', event => {
+            currentTimeEl.innerHTML = `${Math.floor(video.currentTime / 60)}:${Math.floor(video.currentTime % 60)}`;
+            timeEl.value = video.currentTime / video.duration * 100;
+        });
+
+
+        volumeInput.addEventListener('input', () => {
+            video.volume = volumeInput.value;
+        });
+
+    </script>
+</body>
+
+</html>

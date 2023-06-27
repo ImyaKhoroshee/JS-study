@@ -82,7 +82,7 @@
             inputsInForm.forEach(item => {
                 if (item.value === '') {
                     item.classList.add('error');
-                } else if (item.value !== '' && item.classList.contains('error')) {
+                } else {
                     item.classList.remove('error');
                 };
             });

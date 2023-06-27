@@ -152,6 +152,7 @@ img {
     .user-card {
         padding-left: 12px;
         &__id {
+            width: 35px;
             font-size: 1.25rem;
         }
         &__personaldata {
@@ -161,7 +162,7 @@ img {
             gap: 8px;
         }
         &__firstlastname {
-            font-size: 0.8rem;
+            font-size: 0.7rem;
         }
         &__image {
             width: 75px;
