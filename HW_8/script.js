@@ -82,14 +82,14 @@ console.log(`Общая стоимость заказа ${order.getTotalPrice()}
 
 class Bank {
     
-    listOfClient = [];
+    listOfClients = [];
     listOfAccounts = [];
 
     constructor(bankTitle) {
         this.bankTitle = bankTitle;
     }
     addClient(client) {
-        this.listOfClient.push({clientId: client.id, nameClient: client.name, ageClient: client.age});
+        this.listOfClients.push({clientId: client.id, nameClient: client.name, ageClient: client.age});
     }
     openAccount(client, account) {
         this.listOfAccounts.push({
