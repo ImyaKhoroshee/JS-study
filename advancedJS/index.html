@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div>Element 1</div>
+    <div data-active="true">Element 2</div>
+    <div>Element 3</div>
+    <div data-active="true">Element 4</div>
+
+
+    <script>
+        // Часто при работе с DOM мы сталкиваемся с коллекциями элементов, которые не являются стандартными массивами, но похожи
+        // на них.Однако у таких коллекций нет методов массива, и здесь на помощь приходит Array.from.В этом задании вы научитесь
+        // конвертировать коллекции DOM - элементов в массивы и работать с ними.
+        // Дан код html
+        // Напишите функцию, которая собирает все элементы <div> на странице, преобразует их в массив и фильтрует только те из
+        // них, у которых есть атрибут data - active.
+        // Выведите результат на консоль.
+
+        // const allDIV = document.querySelectorAll('div');
+        // const arrayFromDiv = Array.from(allDIV);
+
+        // console.log(arrayFromDiv.filter((value) => { value.hasAttribute('data-active') }));
+        // const divElements = Array.from(document.querySelectorAll('div'));
+
+        // // const activeDivs = divElements.filter(element => element.hasAttribute('data-active'));
+        // const activeDivs = divElements.filter(element => element.dataset.active);
+
+        // activeDivs.forEach(element => {
+        //     console.log(element);
+        // });
+
+
+        //         Представьте себе ситуацию: у нас есть группа студентов, и мы хотим отследить, кто из них посетил какие уроки и кто из преподавателей вёл данные уроки. 
+        // Map будет использоваться для хранения соответствия между уроком и преподавателем.
+        // Set будет использоваться для хранения уникальных уроков, которые посетил каждый студент.
+
+        const lessons = new Map();
+        // 1. Map: урок => преподаватель   ("Математика", "Смирнов"), ("История", "Иванова")
+        lessons.set("Математика", "Смирнов");
+        lessons.set("История", "Иванова");
+
+        // 2. Map: студент => Set уроков
+
+        const student = new Map();
+        student.set('Иван', new Set("Математика", "Смирнов"));
+
+        // Проверка:
+        console.log(`Преподаватель по Математике: ${lessons.get("Математика")}`); // Смирнов
+        console.log(`Уроки Ивана: ${student.get('Иван')}`); //
+
+
+        const lessons = new Map();
+        lessons.set("Математика", "Смирнов");
+        lessons.set("История", "Иванова");
+
+        const ivanLessons = new Set().add('Математика')
+            .add('История');
+
+        const students = new Map();
+        students.set("Иван", ivanLessons);
+
+        console.log(`Преподаватель по Математике: ${lessons.get("Математика")}`); // Смирнов
+        console.log(`Уроки Ивана: ${[...students.get("Иван")]}`);
+    </script>
+</body>
+
+</html>
