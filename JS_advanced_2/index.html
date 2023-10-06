@@ -5,7 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="script.js"></script>
+    <script type="module" src="homework.js"></script>
+    <script type="module" src="homeworkApp.js"></script>
     <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        .news {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .news__item {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            background-color: aquamarine;
+            padding: 15px;
+        }
+
+        .news__item_text {
+            margin-bottom: 10%;
+        }
+
+        .news__item_textarea {
+            margin-bottom: 50px;
+        }
+
+        .load {
+            position: absolute;
+            bottom: 10px;
+        }
+
+        .new-new {
+            width: 200px;
+        }
+    </style>
 </head>
 
 <body>
@@ -14,6 +53,13 @@
         <button id="checkInput">Проверить</button>
         <div id="hintForUser"></div>
     </div>
+    <section>
+        <h1>Отзывы покупателей</h1>
+        <article id="news" class="news">
+
+        </article>
+
+    </section>
 </body>
 
 </html>
