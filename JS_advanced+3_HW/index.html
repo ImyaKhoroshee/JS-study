@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/feedback-icon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>ФидбэК</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="icon-title-box">
+            <img class="icon-title-box__logo" src="./assets/feedback-icon.png" alt="logo">
+            <h1 class="icon-title-box__title">ФидбэК</h1>
+        </div>
+        <nav class="navigation">
+            <ul class="navigation__list">
+                <li><a class="navigation__link" href="#">Главная</a></li>
+                <li><a class="navigation__link" href="show.html">Отзывы</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="add-review">
+            <h2 class="add-review__title">Добавить отзыв</h2>
+            <p class="add-review__good">Название товара</p>
+            <input class="input" type="text" name="title" id="goodTitle">
+            <p class="add-review__good">Ваш отзыв</p>
+            <textarea class="input" name="review" id="goodText" cols="30" rows="10"></textarea>
+            <button class="button" id="addButton">Добавить отзыв</button>
+        </section>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>
