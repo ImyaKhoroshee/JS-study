@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1E1E1E;
+    font-family: 'Orbitron', sans-serif;
+    font-family: 'Outfit', sans-serif;
+}
+
+.center {
+    padding-left: calc(50% - 720px);
+    padding-right: calc(50% - 720px);
+}
+
+.background {
+    background-image: url('./assets/background.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    padding: 48px 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    font-family: Outfit;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    background: linear-gradient(90deg, #FF4300 -6.33%, #FF6400 103.92%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+
+.header__classes-link {
+    width: max-content;
+    padding: 10px 44px;
+    background-color: #FF4601;
+    color: #FFF;
+    font-family: Outfit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+    border: none;
+    border-top-left-radius: 49px;
+    border-bottom-right-radius: 49px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.header__classes-link:hover {
+    background-color: #FFF;
+    color: #FF4601;
+}
+
+.hero {
+    padding-top: 190px;
+    padding-left: 130px;
+    padding-bottom: 253px;
+    padding-right: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+
+}
+
+.hero__heading {
+    color: #FFF;
+    font-family: Orbitron;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 2.56px;
+    width: 504px;
+}
+
+.hero__heading_img {
+    background: transparent;
+}
+
+.hero__text {
+    max-width: 687px;
+    color: #FFF;
+    font-family: Outfit;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 173%;
+    letter-spacing: 0.36px;
+}
+
+.classes {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    padding: 40px 100px;
+    background-image: url('./assets/class-back.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.classes__heading {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.90);
+    font-family: Outfit;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 170.9%;
+    letter-spacing: 0.96px;
+}
+
+.classes__cards-box {
+    display: flex;
+    flex-direction: row;
+    gap: 49px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card__img-box {
+    background-image: url('./assets/rectangle.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.card__img {
+    padding: 0 5px;
+}
+
+.card__title-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__title,
+.card__content-text {
+    color: rgba(255, 255, 255, 0.80);
+    font-family: Outfit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 170.9%;
+    letter-spacing: 0.32px;
+}
+
+.card__content-description {
+    color: rgba(255, 255, 255, 0.90);
+    font-family: Outfit;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 170.9%;
+    letter-spacing: 0.48px;
+}
+
+
+.svg-dot {
+    margin-right: 10px;
+}
+
+.card__quantity-box {
+    display: flex;
+    flex-direction: row;
+    color: rgba(255, 255, 255, 0.80);
+    font-family: Outfit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 170.9%;
+    letter-spacing: 0.32px;
+    gap: 10px;
+}
+
+.button-join,
+.button-cancel {
+    height: 45px;
+    background-color: transparent;
+    border: none;
+    padding: 7px 24px;
+    color: #FFF;
+    font-family: Outfit;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 170.9%;
+    letter-spacing: 0.36px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.button-join {
+    width: 140px;
+    background-image: url('./assets/rec-button.png');
+}
+
+.button-join:hover {
+    color: #1E1E1E;
+}
+
+.button-cancel {
+    width: 206px;
+    background-image: url('./assets/rec-button-white.png');
+}
+
+.inactive {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.button-cancel:hover {
+    color: #FF4300;
+}
