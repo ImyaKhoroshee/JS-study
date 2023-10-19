@@ -25,7 +25,7 @@ const dataProduct = `[
 // const product = document.querySelector('.product');
 
 // JSON.parse(dataProduct).forEach(item => {
-    
+
 //     // Обертка для каждой карточки
 //     const productCard = document.createElement('div');
 //     productCard.classList.add('product-card');
@@ -95,10 +95,19 @@ const dataProduct = `[
 //     const exit = document.createElement('img');
 //     exit.src = './images/cross.svg';
 //     productCardExit.append(exit);
-    
+
 // });
 
 
 const fs = require("fs");
 let fileContent = fs.readFileSync("myJson.json", "utf8");
 console.log(fileContent);
+
+// Parse data
+
+// (async () => {
+//     let timetableFromFile = await (await fetch('data.json')).json();
+//     timetableFromFile.forEach(item => { timetable.push(item) });
+
+//     cardRender();
+// })();

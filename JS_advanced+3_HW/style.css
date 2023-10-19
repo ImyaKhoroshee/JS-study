@@ -96,3 +96,35 @@ body {
     background-color: white;
     color: #1179e7;
 }
+
+.all-reviews {
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.all-reviews__title {
+    text-align: center;
+}
+
+.show-review {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.reviews-item {
+    padding-left: 20px;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.delete-button {
+    width: 200px;
+    align-self: end;
+}

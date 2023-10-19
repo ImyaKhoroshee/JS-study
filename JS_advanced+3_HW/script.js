@@ -1,6 +1,8 @@
 "use strict";
 
-addButton.addEventListener('click', () => {
+addButton.addEventListener('click', addReview);
+
+function addReview() {
     const reviewTitle = goodTitle.value;
     const reviewText = goodText.value;
 
@@ -17,5 +19,6 @@ addButton.addEventListener('click', () => {
         arr.push(reviewText);
         localStorage.setItem(reviewTitle, JSON.stringify(arr));
     }
-
-})
+    goodTitle.value = '';
+    goodText.value = '';
+}
