@@ -92,6 +92,7 @@ body {
     line-height: 120%;
     letter-spacing: 2.56px;
     width: 504px;
+    overflow-wrap: break-word;
 }
 
 .hero__heading_img {
@@ -107,6 +108,7 @@ body {
     font-weight: 500;
     line-height: 173%;
     letter-spacing: 0.36px;
+    overflow-wrap: break-word;
 }
 
 .classes {
@@ -239,4 +241,242 @@ body {
 
 .button-cancel:hover {
     color: #FF4300;
+}
+
+.about {
+    padding: 0px 120px;
+    background-color: #180d06;
+}
+
+.about__title {
+    color: rgba(255, 255, 255, 0.90);
+    font-family: Outfit;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 170.9%;
+    letter-spacing: 0.96px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about__line {
+    width: 50px;
+    height: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #0c0c0e;
+    margin-bottom: 40px;
+}
+
+.about__text {
+    color: rgba(255, 255, 255, 0.90);
+    font-family: Outfit;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 170.9%;
+    letter-spacing: 0.96px;
+    margin-bottom: 20px;
+}
+
+.about__slider-img {
+    width: 380px;
+}
+
+.slider__content {
+    max-width: 1400px;
+    overflow: hidden;
+}
+
+.slider-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    transition: all 1s;
+}
+
+.slider-item__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.slider-item_1_name {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.90);
+    font-family: Outfit;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 170.9%;
+    letter-spacing: 0.96px;
+}
+
+.slider-pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 35px;
+}
+
+.slider-pagination__button {
+    display: inline-block;
+    margin-right: 10px;
+    width: 45px;
+    height: 8px;
+    transform: skewX(-45deg);
+    background-color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.slider-pagination__button_active {
+    background-color: #FF4300;
+    cursor: default;
+}
+
+.slider-pagination__button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.slider-arrow-next,
+.slider-arrow-previous {
+    display: none;
+}
+
+.slider_disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+#pagination-4,
+#pagination-5 {
+    display: none;
+}
+
+@media (max-width: 1439px) {
+    .slider {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slider__content {
+        max-width: 380px;
+        overflow: hidden;
+    }
+
+    .slider-arrow-next,
+    .slider-arrow-previous {
+        display: block;
+        margin-top: -106px;
+        cursor: pointer;
+    }
+
+    .slider__content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .slider-pagination {
+        padding-top: 0;
+    }
+
+    #pagination-4,
+    #pagination-5 {
+        display: flex;
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .hero {
+        padding-top: 110px;
+        padding-left: 12px;
+        padding-bottom: 120px;
+        padding-right: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero__heading {
+        width: 290px;
+        text-align: center;
+    }
+
+    .hero__text {
+        text-align: center;
+    }
+
+    .classes {
+        padding: 0;
+    }
+
+    .classes__heading,
+    .about__title {
+        line-height: 112.9%;
+    }
+
+    .card {
+        padding: 0px 15px;
+    }
+
+    .card__img {
+        width: 300px;
+    }
+
+    .card__buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .about {
+        padding: 0;
+        padding-top: 100px;
+    }
+
+    .about__title {
+        margin-bottom: 36px;
+        ;
+    }
+
+    .card__content-description {
+        width: 300px;
+    }
+
+    .slider__content {
+        max-width: 330px;
+    }
+
+    .slider-arrow-previous,
+    .slider-arrow-next {
+        display: none;
+    }
+
+    .slider-item_1_name {
+        text-align: left;
+    }
+}
+
+@media (max-width: 320px) {
+    .slider {
+        padding-left: 5px;
+    }
 }

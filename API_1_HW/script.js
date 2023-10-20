@@ -1,7 +1,7 @@
 
 const data = `[
-    { "id": "1", "classRoom": "1", "classTitle": "Yoga", "instructorName": "Alphard Costi", "classDate": "20/10/2023", "classTime": "11:30 AM", "classCapacity": "15", "classRecords": "15", "classLevel": "Intermediate", "classDescription": "Strength and flexibility", "image": "./assets/women.jpg" },
-    { "id": "2", "classRoom": "2", "classTitle": "Zumba", "instructorName": "Demott Oliphant", "classDate": "20/10/2023", "classTime": "6:30 PM", "classCapacity": "20", "classRecords": "14", "classLevel": "Advanced", "classDescription": "Movement & Smile", "image": "./assets/zumba.jpg" },
+    { "id": "1", "classRoom": "1", "classTitle": "Yoga", "instructorName": "Mari March", "classDate": "20/10/2023", "classTime": "11:30 AM", "classCapacity": "15", "classRecords": "15", "classLevel": "Intermediate", "classDescription": "Strength and flexibility", "image": "./assets/women.jpg" },
+    { "id": "2", "classRoom": "2", "classTitle": "Zumba", "instructorName": "Grace Oliphant", "classDate": "20/10/2023", "classTime": "6:30 PM", "classCapacity": "20", "classRecords": "14", "classLevel": "Advanced", "classDescription": "Movement & Smile", "image": "./assets/zumba.jpg" },
     { "id": "3", "classRoom": "1", "classTitle": "Body Interval", "instructorName": "Rudd Manners", "classDate": "17/10/2023", "classTime": "8:45 AM", "classCapacity": "14", "classRecords": "13", "classLevel": "Beginner", "classDescription": "Cardio & Muscle", "image": "./assets/barbell.jpg" },
     { "id": "4", "classRoom": "3", "classTitle": "Pilates", "instructorName": "Mari March", "classDate": "18/10/2023", "classTime": "5:00 PM", "classCapacity": "7", "classRecords": "2", "classLevel": "Beginner", "classDescription": "Control & Stability", "image": "./assets/stretching.jpg" },
     {
@@ -124,3 +124,71 @@ function cardRender() {
         }
     });
 }
+// Slider About
+const sliderImages = document.querySelectorAll('.slider-item__wrapper');
+const arrowPrevious = document.querySelector('.slider-arrow-previous');
+const arrowNext = document.querySelector('.slider-arrow-next');
+const sliderPagination = document.querySelectorAll('.slider-pagination__button-wrapper');
+const sliderContentWidth = document.querySelector('.slider-wrapper');
+
+window.addEventListener("resize", () => {
+    if (window.innerWidth >= 1440) {
+        if (sliderCounter === 4) {
+            sliderCounter = 2;
+        }
+        if (sliderCounter === 3) {
+            sliderCounter = 1;
+        }
+    }
+    slideChange();
+    changePaginationColor(sliderCounter);
+});
+
+let sliderCounter = 0;
+
+function previousSlide() {
+    if (sliderCounter === 0) {
+        sliderCounter = sliderImages.length - 1
+        slideChange();
+        changePaginationColor(sliderCounter);
+    } else {
+        sliderCounter -= 1;
+        slideChange();
+        changePaginationColor(sliderCounter);
+    }
+}
+function nextSlide() {
+    if (sliderCounter === sliderImages.length - 1) {
+        sliderCounter = 0;
+        slideChange();
+        changePaginationColor(sliderCounter);
+    } else {
+        sliderCounter += 1;
+        slideChange();
+        changePaginationColor(sliderCounter);
+    }
+
+
+
+}
+
+arrowPrevious.addEventListener('click', previousSlide);
+arrowNext.addEventListener('click', nextSlide);
+
+function slideChange() {
+    sliderContentWidth.style.transform = `translateX(${((-sliderCounter * 410))}px)`;
+}
+
+function changePaginationColor(position) {
+    if (document.querySelector('.slider-pagination__button_active') !== null) {
+        document.querySelector('.slider-pagination__button_active').classList.remove('slider-pagination__button_active');
+    }
+    sliderPagination[position].firstElementChild.classList.add('slider-pagination__button_active');
+}
+sliderPagination.forEach((circle, position) => {
+    circle.addEventListener('click', () => {
+        sliderCounter = position;
+        slideChange();
+        changePaginationColor(sliderCounter);
+    })
+});
