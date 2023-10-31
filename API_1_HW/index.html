@@ -11,6 +11,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script type="module" src="script.js"></script>
+    <script type="module" src="fetchUnsplash.js"></script>
     <title>BodyLife</title>
 </head>
 
@@ -85,6 +86,15 @@
             <div class="slider-arrow-next">
                 <img src="./assets/icons8-right-arrow-50.png" alt="arrow" class="arrow-previous">
             </div>
+        </div>
+    </section>
+    <section class="random-sport-image">
+        <h2 class="random-sport-image__title">Unsplash Photo</h2>
+        <div id="imageBox" class="random-sport-image__image-box">
+        </div>
+        <div id="buttonsAfterRandomImageBox" class="buttons-box">
+            <button id="previousPhotoButton" class="previous-button non-active">Previous</button>
+            <button id="nextPhotoButton" class="next-button non-active">Next</button>
         </div>
     </section>
 </body>
