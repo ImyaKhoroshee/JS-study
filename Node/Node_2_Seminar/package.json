@@ -1,0 +1,14 @@
+{
+  "name": "uuid",
+  "version": "1.0.0",
+  "description": "'using of nmp'",
+  "main": "index.js",
+  "scripts": {
+    "idgenerate": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "uuid": "^9.0.1"
+  }
+}
